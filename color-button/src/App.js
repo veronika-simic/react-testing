@@ -8,6 +8,7 @@ function App() {
   return (
     <div>
       <button style={{backgroundColor: color}} onClick={() => setColor(newColor) }>Change to {newColor}</button>
+      <input type='checkbox' ></input>
     </div>
   );
 }
