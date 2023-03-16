@@ -1,0 +1,76 @@
+React Testing Library
+- not just a library, also opinionated
+- test your software the way users use it not by internal implementation since code can change
+- find elements by accessibility markers, not test IDs (this means that our software is accessibile)
+- renders components into VDOM
+- searches and interacts with VDOM
+- it needs a test runner(Jest, Mocha, Jasmin)
+- allows testing without browser
+- find elements by accessibility handlers (https://testing-library.com/docs/queries/about/#priority)
+- roles (https://www.w3.org/TR/wai-aria/#role_definitions)
+
+React Testing Library vs Jest
+RTL provides virtual DOM for tests while Jest is a test runner that finds tests, runs tests, determines whether tests fail or pass
+RTL is part of npx create-react-app
+
+Run the tests with npm test which starts jest in watch mode. 
+
+Test function syntax
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+render - creates virtual DOM for any JSX argument. In this case it's App.
+This DOM can be accessed with screen global object.
+expect - assertion which causes the test to succed or fail.
+All assertions start with expect + expect argument + matcher
+
+Assertions
+- all start with expect which comes from Jest
+- expect is an object that accepts an argument againts which assertion is made
+- what type of assertion is done depends on the matcher which comes from Jest DOM. Matchers can have arguments
+- jest-dom is installed with create-react-app 
+- jest-dom is imported in src/setupTests.js and that way Matchers are available
+- jest-dom gives us DOM based matchers
+
+Jest
+- test runner
+- npm test starts watch mode 
+- watch mode means that it will only run those tests which are different since last commit 
+- if nothing has changed tests won't be ran
+- global test method has 2 arguments (string description + test function)
+- empty tests pass since no error is thrown
+
+
+Unit tests vs functional test
+
+Unit tests - test one unit of code in isolation
+           - mock dependencies
+           - very easy to find failures
+           - tests could pass even though users have problems and vice versa
+           - more likely to break when refractoring
+Functional tests - test how software behaves (not testing code)
+                 - closer to how users interact
+                 - if we change code tests should still pass
+                 - hard to debugg
+
+Button - change button color, disable it with checkbox
+Debugging tools - logRoles
+
+import {logRoles} from '@testing-library/dom'
+
+const nav = document.createElement('nav')
+nav.innerHTML = `
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>`
+
+logRoles(nav)
+
+
+Unit Testing Functions
+- unit test this functions if there is complex logic inside them
