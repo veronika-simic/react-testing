@@ -43,6 +43,7 @@ Jest
 - if nothing has changed tests won't be ran
 - global test method has 2 arguments (string description + test function)
 - empty tests pass since no error is thrown
+- runs any file that ends in .test.js
 
 
 Unit tests vs functional test
