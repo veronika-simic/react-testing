@@ -70,3 +70,7 @@ nav.innerHTML = `
 </ul>`
 
 logRoles(nav)
+
+
+Unit Testing Functions
+- unit test this functions if there is complex logic inside them
