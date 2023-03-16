@@ -4,8 +4,8 @@ import { replaceCamelWithSpaces } from "./App";
 test("button has correct initial color", () => {
   render(<App />);
 
-  const button = screen.getByRole("button", { name: "Change to blue" });
-  expect(button).toHaveStyle({ backgroundColor: "red" });
+  const button = screen.getByRole("button", { name: "Change to MidnightBlue" });
+  expect(button).toHaveStyle({ backgroundColor: "MediumVioletRed" });
 });
 
 // no need for this test since its in the test above
@@ -13,17 +13,17 @@ test("button has correct initial text", () => {
   render(<App />);
 });
 
-test("button turns blue when clicked and changes text", () => {
+test("button turns MidnightBlue when clicked and changes text", () => {
   render(<App />);
-  const button = screen.getByRole("button", { name: "Change to blue" });
+  const button = screen.getByRole("button", { name: "Change to MidnightBlue" });
   fireEvent.click(button);
-  expect(button).toHaveStyle({ backgroundColor: "blue" });
-  expect(button).toHaveTextContent("Change to red");
+  expect(button).toHaveStyle({ backgroundColor: "MidnightBlue" });
+  expect(button).toHaveTextContent("Change to MediumVioletRed");
 });
 
 test("initial conditions", () => {
   render(<App />);
-  const button = screen.getByRole("button", { name: "Change to blue" });
+  const button = screen.getByRole("button", { name: "Change to MidnightBlue" });
   // check that button is enabled if the checkbox is not clicked
   expect(button).toBeEnabled();
   const checkbox = screen.getByRole("checkbox");
