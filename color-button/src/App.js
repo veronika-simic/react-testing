@@ -8,9 +8,9 @@ function App() {
   const newColor = color === 'red' ? 'blue' : 'red'
   return (
     <div>
-      <button style={{backgroundColor: color}} onClick={() => setColor(newColor) } disabled={disabled}>Change to {newColor}</button>
+      <button style={{backgroundColor: disabled ? 'gray' : color}} onClick={() => setColor(newColor) } disabled={disabled}>Change to {newColor}</button>
       <input type='checkbox' id="disable-button" onChange={(e) => setDisabled(e.target.checked)}/>
-      <label for="disable-button">Disable button</label>
+      <label htmlFor="disable-button">Disable button</label>
     </div>
   );
 }
