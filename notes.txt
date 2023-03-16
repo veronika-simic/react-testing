@@ -21,3 +21,11 @@ render - creates virtual DOM for any JSX argument. In this case it's App.
 This DOM can be accessed with screen global object.
 expect - assertion which causes the test to succed or fail.
 All assertions start with expect + expect argument + matcher
+
+Assertions
+- all start with expect which comes from Jest
+- expect is an object that accepts an argument againts which assertion is made
+- what type of assertion is done depends on the matcher which comes from Jest DOM. Matchers can have arguments
+- jest-dom is installed with create-react-app 
+- jest-dom is imported in src/setupTests.js and that way Matchers are available
+- jest-dom gives us DOM based matchers
