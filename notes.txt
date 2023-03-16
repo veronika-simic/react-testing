@@ -5,6 +5,7 @@ React Testing Library
 - renders components into VDOM
 - searches and interacts with VDOM
 - it needs a test runner(Jest, Mocha, Jasmin)
+- allows testing without browser
 
 React Testing Library vs Jest
 RTL provides virtual DOM for tests while Jest is a test runner that finds tests, runs tests, determines whether tests fail or pass
@@ -40,3 +41,16 @@ Jest
 - if nothing has changed tests won't be ran
 - global test method has 2 arguments (string description + test function)
 - empty tests pass since no error is thrown
+
+
+Unit tests vs functional test
+
+Unit tests - test one unit of code in isolation
+           - mock dependencies
+           - very easy to find failures
+           - tests could pass even though users have problems and vice versa
+           - more likely to break when refractoring
+Functional tests - test how software behaves (not testing code)
+                 - closer to how users interact
+                 - if we change code tests should still pass
+                 - hard to debugg
