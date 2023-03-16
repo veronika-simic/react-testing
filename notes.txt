@@ -5,9 +5,19 @@ React Testing Library
 
 React Testing Library vs Jest
 RTL provides virtual DOM for tests while Jest is a test runner that finds tests, runs tests, determines whether tests fail or pass
-RTL is part of create-react-app
+RTL is part of npx create-react-app
 
-test function 
+Run the tests with npm test which starts jest in watch mode. 
 
-render - creates virtual DOM for any JSX argument. This DOM can be accessed with screen global object
-expect - assertion which causes the test to succed or fail. All assertions start with expect + expect argument + matcher
+Test function syntax
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+render - creates virtual DOM for any JSX argument. In this case it's App.
+This DOM can be accessed with screen global object.
+expect - assertion which causes the test to succed or fail.
+All assertions start with expect + expect argument + matcher
