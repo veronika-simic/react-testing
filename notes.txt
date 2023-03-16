@@ -74,3 +74,9 @@ logRoles(nav)
 
 Unit Testing Functions
 - unit test this functions if there is complex logic inside them
+
+Sundaes 
+- choose ice cream flavor and toppings, submit order
+- flavors and toppings come from server
+- order is sent to server and server returns order IDs
+- order entry, order summary, order confirmation
