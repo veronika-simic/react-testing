@@ -2,6 +2,9 @@ React Testing Library
 - not just a library, also opinionated
 - test your software the way users use it not by internal implementation since code can change
 - find elements by accessibility markers, not test IDs (this means that our software is accessibile)
+- renders components into VDOM
+- searches and interacts with VDOM
+- it needs a test runner(Jest, Mocha, Jasmin)
 
 React Testing Library vs Jest
 RTL provides virtual DOM for tests while Jest is a test runner that finds tests, runs tests, determines whether tests fail or pass
@@ -29,3 +32,11 @@ Assertions
 - jest-dom is installed with create-react-app 
 - jest-dom is imported in src/setupTests.js and that way Matchers are available
 - jest-dom gives us DOM based matchers
+
+Jest
+- test runner
+- npm test starts watch mode 
+- watch mode means that it will only run those tests which are different since last commit 
+- if nothing has changed tests won't be ran
+- global test method has 2 arguments (string description + test function)
+- empty tests pass since no error is thrown
