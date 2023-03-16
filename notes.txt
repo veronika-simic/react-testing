@@ -56,3 +56,5 @@ Functional tests - test how software behaves (not testing code)
                  - closer to how users interact
                  - if we change code tests should still pass
                  - hard to debugg
+
+Button - change button color, disable it with checkbox
