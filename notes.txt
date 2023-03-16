@@ -1,0 +1,13 @@
+React Testing Library
+- not just a library, also opinionated
+- test your software the way users use it not by internal implementation since code can change
+- find elements by accessibility markers, not test IDs (this means that our software is accessibile)
+
+React Testing Library vs Jest
+RTL provides virtual DOM for tests while Jest is a test runner that finds tests, runs tests, determines whether tests fail or pass
+RTL is part of create-react-app
+
+test function 
+
+render - creates virtual DOM for any JSX argument. This DOM can be accessed with screen global object
+expect - assertion which causes the test to succed or fail. All assertions start with expect + expect argument + matcher
