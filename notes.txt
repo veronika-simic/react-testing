@@ -6,6 +6,8 @@ React Testing Library
 - searches and interacts with VDOM
 - it needs a test runner(Jest, Mocha, Jasmin)
 - allows testing without browser
+- find elements by accessibility handlers (https://testing-library.com/docs/queries/about/#priority)
+- roles (https://www.w3.org/TR/wai-aria/#role_definitions)
 
 React Testing Library vs Jest
 RTL provides virtual DOM for tests while Jest is a test runner that finds tests, runs tests, determines whether tests fail or pass
