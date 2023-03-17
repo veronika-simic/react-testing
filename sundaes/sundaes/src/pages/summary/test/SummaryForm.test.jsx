@@ -16,7 +16,7 @@ test("clicking checkbox enables button", () => {
   const checkbox = screen.getByRole("checkbox", {
     name: "I agree to Terms and Conditions",
   });
-  const button = screen.getByRole("button", { name: "Confirm orded" });
+  const button = screen.getByRole("button", { name: "Confirm order" });
   fireEvent.click(checkbox);
   expect(button).toBeEnabled();
   fireEvent.click(checkbox);
