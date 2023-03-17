@@ -24,3 +24,12 @@ test("clicking checkbox enables button", async () => {
   await user.click(checkbox);
   expect(button).toBeDisabled();
 });
+
+test("popover responds to hover", async () => {
+  const user = userEvent.setup;
+  render(<SummaryForm/>);
+  const nullPopover = screen.queryByText(/no ice cream will actually be delivered/i);
+  expect(nullPopover).toBeNull();
+  
+
+})
