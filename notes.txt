@@ -105,3 +105,30 @@ Form elements
  - placeholderText
  - labelText
  - displayValue
+
+
+ Simulating server response by testing Order Entry page
+ - scoop flavors come from server as well as toppings
+ - test that option images render
+ - mock service worker 
+ - mock server response for /scoops and /toppings
+
+ Why mock? 
+ Intercept network calls
+ Test are going to represent what the server would return if we did not mock the server
+  npm i msw
+  create handlers (functions that determine what is returned)
+  create test server
+  test server must listen and intercept requests, must be reset after each test
+
+handlers 
+- have type, method, url to mock and response resolver function
+rest.get(url, (req,res,ctx) => {})
+
+Why use msw instead of Jest mock? 
+
+At the Order page we make two requests at the same time and it would be difficult to 
+do that with other services and delicate because if we would change the order of 
+responses we would get an error. POST request are easier to handle. MSW allows for 
+handling cookies and binary responses like images. MSW works regardless of the method 
+we use for server requests (fetch or axios)
