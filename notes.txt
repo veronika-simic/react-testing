@@ -43,6 +43,7 @@ Jest
 - if nothing has changed tests won't be ran
 - global test method has 2 arguments (string description + test function)
 - empty tests pass since no error is thrown
+- runs any file that ends in .test.js
 
 
 Unit tests vs functional test
@@ -74,3 +75,33 @@ logRoles(nav)
 
 Unit Testing Functions
 - unit test this functions if there is complex logic inside them
+
+Sundaes 
+- choose ice cream flavor and toppings, submit order
+- flavors and toppings come from server
+- order is sent to server and server returns order IDs
+- order entry, order summary, order confirmation
+- it's better to use userEvent than fireEvent
+- install the latest userEvent package
+- userEvent returns a Promise
+
+Screen query methods
+command[All]ByQueryType
+
+command 
+get - expect element to be in the DOM
+query - expect element not to be in the DOM
+find - expect element to appear async
+
+All 
+exclude - expect only one match
+include - expect multiple matches
+
+ByQueryType
+Role (most preferred)
+AltText (images)
+Text (display elements)
+Form elements 
+ - placeholderText
+ - labelText
+ - displayValue
