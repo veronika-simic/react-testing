@@ -81,3 +81,6 @@ Sundaes
 - flavors and toppings come from server
 - order is sent to server and server returns order IDs
 - order entry, order summary, order confirmation
+- it's better to use userEvent than fireEvent
+- install the latest userEvent package
+- userEvent returns a Promise
