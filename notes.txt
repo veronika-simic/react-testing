@@ -84,3 +84,24 @@ Sundaes
 - it's better to use userEvent than fireEvent
 - install the latest userEvent package
 - userEvent returns a Promise
+
+Screen query methods
+command[All]ByQueryType
+
+command 
+get - expect element to be in the DOM
+query - expect element not to be in the DOM
+find - expect element to appear async
+
+All 
+exclude - expect only one match
+include - expect multiple matches
+
+ByQueryType
+Role (most preferred)
+AltText (images)
+Text (display elements)
+Form elements 
+ - placeholderText
+ - labelText
+ - displayValue

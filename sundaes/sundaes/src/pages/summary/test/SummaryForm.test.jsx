@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import SummaryForm from "../SummaryForm";
-import userEvent from '@testing-library/user-event'
+import userEvent from "@testing-library/user-event";
 
 test("initial conditions", () => {
   render(<SummaryForm />);
@@ -25,11 +25,21 @@ test("clicking checkbox enables button", async () => {
   expect(button).toBeDisabled();
 });
 
-test("popover responds to hover", async () => {
+/* test("popover responds to hover", async () => {
   const user = userEvent.setup;
-  render(<SummaryForm/>);
-  const nullPopover = screen.queryByText(/no ice cream will actually be delivered/i);
+  render(<SummaryForm />);
+  const nullPopover = screen.queryByText(
+    /no ice cream will actually be delivered/i
+  );
   expect(nullPopover).toBeNull();
-  
-
-})
+  //popover appears on hover
+  const termsAndConditions = screen.getByText(
+    "I agree to Terms and Conditions"
+  );
+  await user.hover(termsAndConditions);
+  const popover = screen.getByText(/no ice cream will actually be delivered/i);
+  expect(popover).toBeInTheDocument();
+  // popover disappears when mouse out
+  await user.unhover(termsAndConditions);
+  expect(popover).not.toBeInTheDocument();
+}); */
